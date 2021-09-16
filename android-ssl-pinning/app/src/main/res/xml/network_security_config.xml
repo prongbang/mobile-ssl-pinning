@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config xmlns:android="http://schemas.android.com/apk/res/android">
+	<domain-config>
+		<domain includeSubdomains="true">httpbin.org</domain>
+		<pin-set>
+			<pin digest="SHA-256">J0dKy1gw45muM4o/vm/tskFQ2BWudtp9XLxaW7OtowQ=</pin>
+			<pin digest="SHA-256">JSMzqOOrtyOT1kmau6zKhgT676hGgczD5VMdRMyJZFA=</pin>
+		</pin-set>
+		<trustkit-config enforcePinning="true" />
+		<trust-anchors>
+			<certificates src="system" />
+		</trust-anchors>
+	</domain-config>
+	<base-config cleartextTrafficPermitted="true">
+		<trust-anchors>
+			<certificates src="system" />
+		</trust-anchors>
+	</base-config>
+</network-security-config>
